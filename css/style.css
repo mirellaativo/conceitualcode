@@ -1,0 +1,90 @@
+body {
+    margin: 0 auto;
+}
+.container {
+    width: 100vw;
+    height: 100vh;
+    background: #6c7a89;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+
+.box {
+    width: 300px;
+    height: 400px;
+    background: #fff;
+    animation: go-back 1s infinite alternate;
+}
+
+@keyframes go-back {
+    from {
+        transform: translateX(400px);
+    }
+    to {
+        transform: translateX(0)
+    }
+}
+
+.move {
+    width: 100px;
+    height: 100px;
+    /* backgroud #FF000F; */
+    animation: mymove 5s infinite;
+    position: fixed !important;
+    z-index: 2;
+    display: flex;
+    position: fixed !important;
+    justify-content: left !important;
+    align-items: flex-start !important;
+}
+
+@keyframes mymove {
+    from {
+        top: 0px;
+    }
+    to {
+        top: 87%;
+    }
+}
+
+.move img {
+    width: 200%;
+}
+
+.google-logo {
+    width: 300px;
+    height: 300px;
+    position: relative;
+    background: #fff;
+    border-top: 100px solid #ea4335;
+    border-right: 100px solid #4285f4;
+    border-bottom: 100px solid #34a853;
+    border-left: 100px solid #fbbc05;
+    padding: 0;
+    margin: 10vh auto 0;
+    border-radius: 50%;
+}
+.google-logo:before {
+    position: absolute;
+    content: '';
+    background: #4285f4;
+    width: 245px;
+    height: 100px;
+    z-index: 100;
+    top: 33.2%;
+    right: -205px;
+    transform: translate(-50%);
+}
+.google-logo:after {
+    content: '';
+    position: absolute;
+    width: 0;
+    height: 0;
+    border-top: 200px solid transparent;
+    border-right: 200px solid #fff;
+    z-index: 101;
+    top: -100px;
+    right: -100px;
+}
